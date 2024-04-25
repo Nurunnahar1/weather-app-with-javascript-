@@ -13,7 +13,11 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder="enter city name" spellcheck="false">
-            <img src="./assets/img/search.png" alt="">
+            <button><img src="./assets/img/search.png" alt=""></button>
+        </div>
+            
+        <div class="error">
+            <p>Invalid city name</p>
         </div>
 
         <div class="weather">
@@ -43,19 +47,7 @@
     <script src="src/models.js"></script>
     <script src="src/functions.js"></script>
     <script src="src/main.js"></script>
-
-
-    <script>
-        const apiKey = "c50b02ef3e0e7385cdc9dd7ae08b41db";
-        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bogra";
-
-        async function checkWeather() {
-            const response = await fetch(apiUrl + `&appid=${apiKey}`);
-            var data = await response.json();
-            console.log(data);
-        }
-        checkWeather();
-    </script>
+ 
 </body>
 
 </html>
